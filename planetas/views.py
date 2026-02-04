@@ -25,12 +25,12 @@ class PlanetasListView(APIView):
         
         if climate:
             planetas_filtrados = [
-                p for p in planetas_filtrados if climate.lower().replace(" ", "") in p['climate'].lower().replace(" ", "")
+                p for p in planetas_filtrados if climate.lower().replace(" ", "") == p['climate'].lower().replace(" ", "")
             ]
 
         if terrain:
             planetas_filtrados = [
-                p for p in planetas_filtrados if terrain.lower().replace(" ", "") in p['terrain'].lower().replace(" ", "")
+                p for p in planetas_filtrados if terrain.lower().replace(" ", "") == p['terrain'].lower().replace(" ", "")
             ]
 
         if population:
@@ -40,7 +40,7 @@ class PlanetasListView(APIView):
 
         if gravity:
             planetas_filtrados = [
-                p for p in planetas_filtrados if gravity.lower().replace(" ", "") in p['gravity'].lower().replace(" ", "")
+                p for p in planetas_filtrados if gravity.lower().replace(" ", "") == p['gravity'].lower().replace(" ", "")
             ]
 
         
