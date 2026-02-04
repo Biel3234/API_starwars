@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-class SpeciesSerializer(serializers.Serializer):
+class EspeciesSerializer(serializers.Serializer):
     name = serializers.CharField()
     classification = serializers.CharField()
     designation = serializers.CharField()

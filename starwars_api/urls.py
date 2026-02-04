@@ -6,4 +6,5 @@ urlpatterns = [
     path('api/', include("personagens.urls")),
     path('api/', include("naves.urls")),
     path('api/', include("planetas.urls")),
+    path('api/', include("species.urls")),
 ]
