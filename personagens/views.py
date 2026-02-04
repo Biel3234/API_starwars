@@ -1,5 +1,5 @@
-from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework import status
 
 from .serializers import PersonagensSerializer
@@ -21,7 +21,7 @@ class PersonagensListView(APIView):
 
         if name:
             personagens_filtrados = [
-                p for p in personagens_filtrados if name.lower() in p['name'].lower()
+                p for p in personagens_filtrados if name.lower().replace(" ", "") in p['name'].lower().replace(" ", "")
             ]
         
         if gender:

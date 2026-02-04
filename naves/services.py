@@ -4,7 +4,7 @@ import requests
 # Coleta todas as naves da API
 def fetch_naves():
     naves = []
-    url = f'{settings.BASE_URL}/naves'
+    url = f'{settings.BASE_URL}/starships'
 
     # Para mostrar todas as naves em uma pagina so
     while url:
