@@ -9,4 +9,4 @@ class NavesSerializer(serializers.Serializer):
     crew = serializers.CharField()
     passengers = serializers.CharField()
     cargo_capacity = serializers.CharField()
-    pilots = serializers.ListField(child = serializers.CharField())
+    pilots = serializers.ListField(child = serializers.URLField())
