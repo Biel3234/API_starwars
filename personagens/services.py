@@ -1,6 +1,6 @@
 from django.conf import settings
 import requests
-url = f'{settings.BASE_URL}/people'
+
 # Coleta todos os personagens da API
 def fetch_personagens():
     personagens = []
