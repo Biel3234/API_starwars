@@ -28,7 +28,7 @@ class NaveListView(APIView):
 
         if manufacturer:
             naves_filtradas = [
-                n for n in naves_filtradas if manufacturer.lower().replace(" ", "") in n["manufacturer"].lower().replace(" ", "")
+                n for n in naves_filtradas if manufacturer.lower().replace(" ", "") == n["manufacturer"].lower().replace(" ", "")
             ]
 
         if not naves:
