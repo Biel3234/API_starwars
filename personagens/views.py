@@ -15,6 +15,9 @@ class PersonagensListView(APIView):
         # Filtros
         name = request.query_params.get("name") # Pega o nome do personagem na URL
         gender = request.query_params.get("gender") # Pega o sexo do personagem na URL
+        height = request.query_params.get("height") # Pega a altura do personagem na URL
+        hair_color = request.query_params.get("hair_color") # Pega a cor do cabelo do personagem na URL
+        eye_color = request.query_params.get("eye_color") # Pega a cor do cabelo do personagem na URL
 
         if name:
             personagens_filtrados = [
@@ -25,6 +28,23 @@ class PersonagensListView(APIView):
             personagens_filtrados = [
                 p for p in personagens_filtrados if gender.lower() == p['gender'].lower()
             ]
+
+        if height:
+            personagens_filtrados = [
+                p for p in personagens_filtrados if height.lower() == p['height'].lower()
+            ]
+
+        if hair_color:
+            personagens_filtrados = [
+                p for p in personagens_filtrados if hair_color.lower() == p['hair_color'].lower()
+            ]
+
+        if eye_color:
+            personagens_filtrados = [
+                p for p in personagens_filtrados if eye_color.lower() == p['eye_color'].lower()
+            ] 
+
+        
         # Tratando erro caso nao encontre o personagem
         if not personagens_filtrados:
             return Response(
