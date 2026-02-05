@@ -54,6 +54,9 @@ GET /personagens
 Filtros disponíveis:
 - name
 - gender
+- height
+- hair_color
+- eye_color
 
 Exemplo:
 
@@ -70,6 +73,8 @@ Filtros disponíveis:
 - name
 - climate
 - terrain
+- population
+- gravity
 
 Exemplo:
 
@@ -98,6 +103,20 @@ Filtros disponíveis:
 - name
 - model
 - manufacturer
+- vehicle_class
+
+---
+
+### 👤 Espécies
+
+GET /especies
+
+
+Filtros disponíveis:
+- name
+- classification
+- designation
+- language
 
 ---
 
